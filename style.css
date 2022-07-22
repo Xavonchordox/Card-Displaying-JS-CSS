@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#main-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: baseline;
+  width: 100%;
+}
+
+#main-container .child-container {
+  width: calc(25% - 20px);
+  margin: 10px;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.24);
+  padding: 20px 10px;
+}
+#main-container .child-container .cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+}
+#main-container .child-container .cardHeader .cardInformation {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#main-container .child-container .cardHeader .cardInformation .cardAuthor {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 15px;
+}
+
+#main-container .child-container .profileImg {
+  width: 3.2em;
+  object-fit: cover;
+  height: 3.2em;
+  border-radius: 100px;
+  display: inline;
+}
+
+#main-container .child-container .name {
+  font-size: 1.3em;
+}
+
+#main-container .child-container .date {
+  font-size: 0.8em;
+  font-weight: 100;
+}
+
+#main-container .child-container .img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+#main-container .child-container .captions {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.22);
+}
+
+#main-container .child-container .hearticon {
+  border: none;
+  background-color: white;
+  position: relative;
+  top: 2px;
+}
+
+@media screen and (max-width: 992px) {
+  #main-container .child-container {
+    width: calc(50% - 20px);
+  }
+
+  #main-container .child-container .img {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #main-container .child-container {
+    width: 100%;
+    margin: 10px 5px;
+  }
+}
+
+#load-btn {
+  display: block;
+  border: none;
+  border-radius: 10px;
+  margin: 50px auto;
+  padding: 15px 30px;
+  font-size: 1.5em;
+  font-weight: 600;
+  background-color: #0081ff;
+  color: white;
+  cursor: pointer;
+}
+
+.liked > svg {
+  fill: red;
+  color: red;
+}
